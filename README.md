@@ -1,20 +1,55 @@
-Relatório de Testes Unitários - [Caue, Luis Felipe, Guilherme e Gabriel]
-Este diretório contém os testes automatizados realizados com Jest para validar as regras de negócio do Projeto Integrador.
+# Sistema de Login WebDriver
 
-O que está sendo testado?
-Módulo de Autenticação (auth.js):
+Projeto simples de automação de teste usando Selenium WebDriver e ChromeDriver.
 
-Validação de formato de e-mail.
+## Descrição
 
-Fluxo de login com credenciais corretas/incorretas.
+Este repositório contém uma página de login básica (`index.html`) e um script de teste em Node.js (`teste.js`) que automatiza a interação com o formulário usando `selenium-webdriver`.
 
-Módulo de Calculo de Frete (shipping.js):
+O formulário valida um usuário estático:
+- usuário: `admin`
+- senha: `123`
 
-Cálculo base para diferentes CEPs.
+## Estrutura do projeto
 
-O que NÃO está sendo testado?
-Integração com Banco de Dados: Os testes utilizam mocks para simular o banco, focando apenas na lógica da função.
+- `index.html` — página de login simples com campos de usuário e senha.
+- `script.js` — lógica de front-end para validar as credenciais e exibir a mensagem.
+- `teste.js` — script de automação que abre a página local e realiza um login via Selenium.
+- `package.json` — dependências e script de execução.
 
-Interface Gráfica (UI): Não estamos testando cliques em botões ou renderização de cores, apenas a lógica do JavaScript.
+## Pré-requisitos
 
-Chamadas de API Externas: As respostas de APIs de terceiros foram simuladas para evitar dependência de rede.
+- Node.js instalado
+- Google Chrome instalado
+- Dependências instaladas com `npm install`
+
+## Instalação
+
+No diretório do projeto:
+
+```bash
+npm install
+```
+
+## Execução
+
+### Abrir a aplicação manualmente
+
+Basta abrir o arquivo `index.html` no navegador.
+
+### Executar o teste automatizado
+
+```bash
+npm test
+```
+
+O script `teste.js` abrirá o Chrome, preencherá o formulário e exibirá o resultado no terminal.
+
+## Resultado esperado
+
+- Se usar `admin` e `123`, a mensagem exibida deve ser: `Login realizado com sucesso`.
+- Para outras credenciais, a mensagem será: `Usuário ou senha inválidos`.
+
+## Observações
+
+O teste usa um caminho local para o arquivo HTML. Se for executar em outra máquina, ajuste o caminho em `teste.js` conforme necessário.
