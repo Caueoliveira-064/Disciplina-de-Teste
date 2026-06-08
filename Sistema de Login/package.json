@@ -1,0 +1,17 @@
+{
+  "name": "sistemadelogin-webdriver",
+  "version": "1.0.0",
+  "description": "Projeto simples de automação de teste usando Selenium WebDriver e ChromeDriver.",
+  "main": "script.js",
+  "scripts": {
+    "test": "node teste.js"
+  },
+  "keywords": [],
+  "author": "Hudson Neves",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chromedriver": "^149.0.1",
+    "selenium-webdriver": "^4.44.0"
+  }
+}
