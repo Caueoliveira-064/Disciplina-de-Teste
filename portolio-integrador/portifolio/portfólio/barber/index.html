@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Telasco | Barbearia & Estilo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Barbearia Telasco</div>
+        <nav>
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#booking">Agendamento</a></li>
+                <li><a href="../index.html" class="back-link">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-text">
+            <h1>Corte & Confiança</h1>
+            <p>A arte da barbearia clássica em um ambiente moderno.</p>
+            <a href="#booking" class="btn-primary">Reserve seu Horário</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="title">Nossos Serviços</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Corte Clássico</h3>
+                <p>Corte preciso com tesoura e máquina, finalizado com lavagem.</p>
+                <span class="price">R$ 50,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Barba Esculpida</h3>
+                <p>Modelagem com toalha quente e finalização com balm premium.</p>
+                <span class="price">R$ 40,00</span>
+            </div>
+            <div class="service-card">
+                <h3>Combo Imperial</h3>
+                <p>Corte completo + Barba + Massagem capilar.</p>
+                <span class="price">R$ 80,00</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="gallery-grid">
+            <img src="../assets/barber/tools.png" alt="Barber Tools">
+            <!-- Placeholders for more images -->
+            <div class="gallery-placeholder"></div>
+            <div class="gallery-placeholder"></div>
+            <div class="gallery-placeholder"></div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="booking-form">
+            <h2>Agende sua Visita</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="tel" placeholder="Seu Telefone" required>
+                <select>
+                    <option value="">Selecione o Serviço</option>
+                    <option value="corte">Corte Clássico</option>
+                    <option value="barba">Barba</option>
+                    <option value="combo">Combo Imperial</option>
+                </select>
+                <button type="submit" class="btn-submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Barbearia Telasco. Domine seu estilo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

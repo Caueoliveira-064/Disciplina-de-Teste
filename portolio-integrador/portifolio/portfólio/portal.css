@@ -1,0 +1,121 @@
+:root {
+    --restaurant-color: #8e1c12;
+    --barber-color: #cd7f32;
+    --white: #ffffff;
+    --transition-speed: 0.8s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+    background: #000;
+}
+
+.portal-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.portal-side {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: flex var(--transition-speed) cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portal-side:hover {
+    flex: 2;
+}
+
+.restaurant {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/restaurant/hero.png') center/cover no-repeat;
+}
+
+.barber {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/barber/hero.png') center/cover no-repeat;
+}
+
+.side-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.5s;
+    z-index: 1;
+}
+
+.portal-side:hover .side-overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.side-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portal-side:hover .side-content {
+    transform: scale(1.1);
+}
+
+.side-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.side-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    opacity: 0.6;
+}
+
+.portal-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s;
+}
+
+.btn-restaurant:hover {
+    background: var(--restaurant-color);
+    border-color: var(--restaurant-color);
+    box-shadow: 0 10px 30px rgba(142, 28, 18, 0.4);
+}
+
+.btn-barber:hover {
+    background: var(--barber-color);
+    border-color: var(--barber-color);
+    box-shadow: 0 10px 30px rgba(205, 127, 50, 0.4);
+}
+
+@media (max-width: 768px) {
+    .portal-container { flex-direction: column; }
+    .side-title { font-size: 3rem; }
+    .portal-side:hover { flex: 1; }
+}
